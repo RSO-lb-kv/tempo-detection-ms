@@ -11,6 +11,7 @@ import { resolve } from 'path';
 import { HealthModule } from './health/health.module';
 import { TerminusService } from './health/terminus.service';
 import { LoggingInterceptor } from './interceptors/logging.interceptor';
+import { TempoDetectionModule } from './tempo-detection/tempo-detection.module';
 
 @Module({
   imports: [
@@ -42,6 +43,7 @@ import { LoggingInterceptor } from './interceptors/logging.interceptor';
       imports: [HealthModule],
       useClass: TerminusService,
     }),
+    TempoDetectionModule,
   ],
   providers: [
     {
