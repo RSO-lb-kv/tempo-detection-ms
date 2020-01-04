@@ -1,0 +1,5 @@
+config:
+  key: tempo-detection
+consul:
+  host: 34.89.16.1
+  port: 80
